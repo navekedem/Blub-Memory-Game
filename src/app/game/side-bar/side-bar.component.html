@@ -1,0 +1,16 @@
+<div class="side-bar-wrapper">
+    <div class="side-bar-wrapper-user">
+        <h3>User Name : {{user.username}}</h3>
+    </div>
+    <div class="side-bar-wrapper-date">
+        <span id="date"></span>&nbsp;&nbsp;<span id="clock"></span>
+    </div>
+    <div class="side-bar-wrapper-scores">
+        <button class="site-btn" (click)="toggleScoreList()">Toggle scores list</button>
+        <div class="side-bar-wrapper-scores-list" *ngIf="toggleList">
+            <ul>
+                <li *ngFor="let score of user.scores">{{score}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

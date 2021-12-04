@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="user-details">
+        <h2 class="user-details-name">Welcome : {{user.username}}</h2>
+        <div class="user-details-scores">
+            <h2 class="user-details-current_score">Current Score: {{user.currentScore}}</h2>
+            <h2 class="user-details-best_score">Best score: {{user.bestScore}}</h2>
+        </div>
+    </div>
+    <div class="start-game">
+        <button class="start-game-button site-btn" type="button" *ngIf="!startGame" (click)="intializeGame()">Let's Play</button>
+    </div>
+    <div class="game-board" *ngIf="startGame">
+        <div *ngFor="let blub of blubs;" class="game-board-blub" #blubsElements id={{blub.color}}>
+            <span class="game-board-step"></span>
+            <button class="game-board-button" type="button" disabled="true" (click)="handleBlubClick(blub)"></button>
+        </div>
+        <div class="game-board-message" id="game-msg">
+
+        </div>
+    </div>
+</div>
+<div class="side-bar">
+    <app-side-bar></app-side-bar>
+</div>
+
+
+<div class="modal-overlay" *ngIf="endGame"></div>
+<div class="modal" id="popupModal" *ngIf="endGame" #modal>
+    <div class="modal-content">
+        <a class="modal-close" href="javascript:void(0)" (click)="closeModal()">&times;</a>
+        <h4 class="modal-title"></h4>
+        <div class="modal-btn">
+            <button class="start-game-button site-btn" type="button" (click)="intializeGame()">Play Again</button>
+        </div>
+    </div>
+</div>

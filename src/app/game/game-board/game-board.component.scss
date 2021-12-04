@@ -1,0 +1,88 @@
+.user-details {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    &-scores {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-name {
+        text-decoration: underline;
+    }
+}
+.start-game {
+    text-align: center;
+   
+}
+.game-board {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+    margin: 5rem auto 0;
+    &-blub {
+        flex: 0 0 28%;
+        min-height: 10rem;
+        margin-bottom: 1.8rem;
+        position: relative;
+        button {
+            display: block;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid gray;
+            border-radius: 50%;
+            height: 100%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        span {
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: -1.5rem;
+            transform: translateX(50%);
+            right: 50%;
+        }
+    }
+    &-message{
+        flex: 0 0 100%;
+        text-align:center;
+        margin-top:1rem;
+        font-size: 1.3rem;
+        color: green;
+    }
+    @media (max-width:1000px){
+        width:85%;
+    }
+    @media (max-width:768px){
+        &-blub{
+            flex: 0 0 45%;
+            min-height: 8rem;
+        }
+    }
+}
+
+
+.modal-overlay{position: fixed;top: 0; bottom: 0;left: 0; right: 0; background: rgba(0, 0, 0, 0.7);}
+.modal{ 
+    position: fixed;
+    top: 50%;
+    right: 0;left: 0;
+    &-content{
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+    &-close{
+        display: block;
+        text-align: right;
+        color: #665e5e;
+        text-decoration: none;
+        font-size:1rem;
+    }
+}

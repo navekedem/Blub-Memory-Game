@@ -1,0 +1,29 @@
+.user-login{
+    margin-top:5rem;
+    &-form{
+        background-color: #fff;
+        width: 60%;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        border-radius: 15px;
+        margin: auto;
+        &-item{
+            margin-bottom:1rem;
+            input{
+                display: block;
+                width:100%;font-size: 1rem;
+                padding: 0.3rem;
+                border-radius: 5px;
+            }
+            label{
+                display: block;
+                font-size: 1rem;
+                margin-bottom:0.3rem;
+            }
+            &.submit-btn{
+                text-align: center; 
+            }
+        }
+        .error{color: red;display:none;}
+    }
+}

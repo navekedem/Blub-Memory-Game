@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="user-login">
+        <form class="user-login-form" [formGroup]="loginForm" (ngSubmit)="login($event)">
+            <div class="user-login-form-item">
+                <label for="username">User Name</label>
+                <input type="text" id="username" formControlName="username" placeholder="Enter your user name">
+                <span class="error" id="username-error">Plese Insert User Name</span>
+            </div>
+            <div class="user-login-form-item submit-btn">
+                <button type="submit" class="site-btn">Start</button>
+            </div>
+        </form>
+    </div>
+</div>
